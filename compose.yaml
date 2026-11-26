@@ -1,0 +1,23 @@
+services:
+  dashboard:
+    build: .
+    ports:
+      - "127.0.0.1:${DASHBOARD_PORT:-18787}:8000"
+    environment:
+      MONGO_URL: mongodb://database:27017
+      MONGO_DATABASE: "${MONGO_DATABASE:-marketing_analytics}"
+      SEED_DEMO: "${SEED_DEMO:-true}"
+    depends_on:
+      database:
+        condition: service_healthy
+  database:
+    image: mongo:7.0
+    volumes:
+      - posts:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok || quit(1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+volumes:
+  posts:

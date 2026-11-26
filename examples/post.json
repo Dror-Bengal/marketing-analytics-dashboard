@@ -1,0 +1,12 @@
+[
+  {
+    "fb_post_id": "our-page-001",
+    "page_name": "Open Studio",
+    "created_time": "2026-10-15T12:30:00Z",
+    "media_type": "photo",
+    "message": "Saturday's open studio runs until eight.",
+    "metrics": {"impressions": 2100, "reach": 1650, "comments": 2, "reactions": 78, "shares": 5},
+    "analysis": {"title_english": "Later hours for the open studio", "meta_category": "Positive"},
+    "comments": ["Can we bring our own prints?", "The later time works for us."]
+  }
+]

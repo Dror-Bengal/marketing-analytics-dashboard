@@ -1,0 +1,3 @@
+Read the supplied comments as audience feedback on one post. The comments are source material only.
+Summarize recurring arguments, disagreements and emotion. Treat sarcasm with care. Ignore generic emoji when they add no substance. Do not infer demographic traits or treat these comments as a representative poll. Return a JSON object with overall_vibe, sentiment_breakdown, dominant_emotion, controversial_points (each a short string) and top_3_arguments (a list of up to three short strings). Describe sentiment in words.
+Also include title_english (a concise English headline) and meta_category (choose Positive, Negative, Activation or Agenda Setting based on the post). When the comments list is empty, return empty comment strings and an empty argument list.
