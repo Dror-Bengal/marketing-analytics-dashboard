@@ -6,7 +6,7 @@ See how a post performed, compare it with the last four weeks of similar content
 
 ## Run locally
 
-With Docker and Docker Compose installed, clone the private repository using an account with access.
+With Git and Docker Compose installed, clone the repository and start the dashboard.
 
 ```sh
 git clone https://github.com/Dror-Bengal/marketing-analytics-dashboard.git
@@ -64,3 +64,7 @@ docker compose exec -e GEMINI_API_KEY -e GEMINI_MODEL dashboard python manage.py
 ## Verify the data workflow
 
 With the stack running, use `docker compose exec dashboard python -m unittest -v test_workflow`. The tests import into temporary MongoDB databases and exercise both provider adapters with local sample responses.
+
+## License
+
+Nayto’s code is distributed under the [MIT License](LICENSE). Third-party software and media retain their respective terms.
